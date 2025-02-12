@@ -232,7 +232,10 @@ export default function ReportPage({ fetchedRecords, editedRecords }: { fetchedR
     doc.text(`Total Value: ${overallTotals?.totalValue.toLocaleString("en-US")}/=`, 20, yPos);
     yPos += 20;
   
-   
+      
+  
+  
+
 
 
     // Footer
@@ -250,6 +253,8 @@ export default function ReportPage({ fetchedRecords, editedRecords }: { fetchedR
     doc.setFillColor(255, 255, 0); // Set color to yellow (RGB)
     doc.rect(0, 295, 300, 10, 'F'); // Thinner yellow-filled rectangle (y=310 and height=10)
     
+
+
   
     // Format date for filename (YYYY-MM-DD)
     const formattedDate = new Date().toISOString().split("T")[0];
