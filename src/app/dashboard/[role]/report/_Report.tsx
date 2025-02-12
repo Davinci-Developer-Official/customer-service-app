@@ -151,6 +151,11 @@ export default function ReportPage({ fetchedRecords, editedRecords }: { fetchedR
   const generatePDF = () => {
     const doc = new jsPDF();
     let yPos = 20; // Start position for text
+
+    //Add the logo
+    const logo ="/images/county.png";
+    doc.addImage(logo,"PNG",80,yPos,50,20);
+    yPos+=30;
   
     // Get the current date
     const currentDate = new Date().toLocaleDateString("en-US", {
